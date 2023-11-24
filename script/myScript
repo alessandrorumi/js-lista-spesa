@@ -24,3 +24,24 @@ while (i < listaSpesa.length) {
   i++;
 
 }
+
+/*
+
+while (i < listaSpesa.length) {
+
+  // append
+
+  // Creazione elemento li
+  const elementList = document.createElement('li');
+
+  // Creazione contenuto
+  elementList.append(listaSpesa[i]);
+
+  // Inserimento contenuto nella listaUl
+  listaUl.append(elementList);
+
+  i++;
+
+}
+
+*/
