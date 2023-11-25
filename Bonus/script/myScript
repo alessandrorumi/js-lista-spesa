@@ -1,0 +1,47 @@
+// Dichiarazione Ul (riferimento HTML)
+listaUl = document.querySelector('.listaElementi');
+
+// Array Lista della Spesa
+let listaSpesa = ['pane', 'pasta', 'mele', 'pere', 'maiale', 'branzino'];
+
+// Variabile Lista Elemento
+let elementList = '';
+
+// While
+
+let i = 0;
+
+while (i < listaSpesa.length) {
+
+  // innerHTML
+
+  // Creazione elemento li
+  elementList = `<li> ${listaSpesa[i]} </li>`
+
+  // Rappresentazione elemento li in HTML 
+  listaUl.innerHTML += elementList;
+
+  i++;
+
+}
+
+/*
+
+while (i < listaSpesa.length) {
+
+  // append
+
+  // Creazione elemento li
+  const elementList = document.createElement('li');
+
+  // Creazione contenuto
+  elementList.append(listaSpesa[i]);
+
+  // Inserimento contenuto nella listaUl
+  listaUl.append(elementList);
+
+  i++;
+
+}
+
+*/
