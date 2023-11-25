@@ -1,47 +1,35 @@
+// Dichiarazione elemento Lista della Spesa
+const listItem = document.getElementById('list-item');
+
+// Dichiarazione Bottone Invio Elementi
+const send = document.getElementById('send-button');
+
 // Dichiarazione Ul (riferimento HTML)
-listaUl = document.querySelector('.listaElementi');
+let listaUl = document.querySelector('.lista-elementi');
 
-// Array Lista della Spesa
-let listaSpesa = ['pane', 'pasta', 'mele', 'pere', 'maiale', 'branzino'];
+// Array Lista della Spesa (Vuoto)
+let listaSpesa = [];
 
-// Variabile Lista Elemento
-let elementList = '';
+// Dichiarazione valore dell'elemento della lista inserito
+let outputListItem;
 
-// While
+// Dichiarazione elemento li (in Html)
+let liHtml;
 
-let i = 0;
+// Funzione al click del mouse
+send.addEventListener('click', function() {
 
-while (i < listaSpesa.length) {
+  outputListItem = listItem.value;
 
-  // innerHTML
+  console.log(outputListItem);
 
-  // Creazione elemento li
-  elementList = `<li> ${listaSpesa[i]} </li>`
+  listaSpesa.push(outputListItem);
 
-  // Rappresentazione elemento li in HTML 
-  listaUl.innerHTML += elementList;
+  console.log(listaSpesa);
 
-  i++;
+  liHtml = `<li> ${outputListItem} </li>`;
 
-}
+  listaUl.innerHTML += liHtml;
 
-/*
+})
 
-while (i < listaSpesa.length) {
-
-  // append
-
-  // Creazione elemento li
-  const elementList = document.createElement('li');
-
-  // Creazione contenuto
-  elementList.append(listaSpesa[i]);
-
-  // Inserimento contenuto nella listaUl
-  listaUl.append(elementList);
-
-  i++;
-
-}
-
-*/
